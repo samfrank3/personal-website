@@ -1,2 +1,2 @@
-# personal-website created 14 Mar 2022
+# personal-website
 Samuel Frank's Personal Website
