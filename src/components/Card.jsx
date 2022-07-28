@@ -33,18 +33,18 @@ const fadeOut = keyframes`
 
 const Card = (props) => {
     const [isHovering, setIsHovering] = useState(false);
-
-    const isMouseOver = () => {
+    
+    const handleMouseIn = () =>{
         setIsHovering(true);
     }
-
-    const isMouseOut = () => {
+    
+    const handleMouseOut = () => {
         setIsHovering(false);
     }
 
     return (
         isHovering ?
-        <SamCard onMouseOver={isMouseOver} onMouseOut={isMouseOut}>
+        <SamCard onMouseOver={handleMouseIn} onMouseOut={handleMouseOut}>
             <SamCardHover>
                 <span style={{fontSize: '21px', lineHeight: '1.5'}}>
                     <ul style={{padding: '25px 60px', fontFamily: 'Helvetica Neue'}}>
@@ -70,6 +70,6 @@ const Card = (props) => {
                 </div>
         </SamCard>
     );
-};
+}
 
 export default Card;
