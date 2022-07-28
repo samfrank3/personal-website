@@ -1,0 +1,48 @@
+body {
+  background: linear-gradient(180deg, #34E89E, #0F3443);
+  background-attachment:fixed;
+  color: #eee;
+}
+
+.container{
+  padding-left: 8%;
+  display: grid;
+  grid-template-columns: 600px min-content 1fr;
+  gap: 1rem;
+  align-items: center;
+}
+.aboutBody{
+  font-size: 1.5rem;
+  width: 600px;
+  align-items: center;
+  /* padding-right: 8%; */
+}
+
+.subTitle{
+  font-size: 3rem;
+}
+
+.intro{
+  font-family: "Playfair Display";
+  font-weight: 400;
+  font-size: 4rem;
+  padding-top: 15%;
+  margin-bottom: 25%;
+  color: #0F3443;
+}
+
+.left{
+  padding-left: 8%;
+}
+
+.name{
+  color: #eee;
+}
+
+.positions{
+  font-size: 3rem;
+}
+
+footer{
+  text-align: center;
+}
