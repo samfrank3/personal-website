@@ -56,7 +56,7 @@ const Card = (props) => {
             </SamCardHover>
         </SamCard>
         :
-        <SamCard className="ui two column grid" style={{margin: '40px auto'}} onMouseOver={isMouseOver} onMouseOut={isMouseOut}>
+        <SamCard className="ui two column grid" style={{margin: '40px auto'}} onMouseOver={handleMouseIn} onMouseOut={handleMouseOut}>
                 <div className="column" style={{width: '20%', padding: 0, textAlign: 'center'}}>
                     <div className="img" style={{marginTop: '20px'}}>
                         <img src={props.logo} width='150' height='150' alt='logo'/>
