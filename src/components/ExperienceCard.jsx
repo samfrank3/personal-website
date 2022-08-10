@@ -31,7 +31,7 @@ const fadeOut = keyframes`
     }
 `;
 
-const Card = (props) => {
+const ExperienceCard = (props) => {
     const [isHovering, setIsHovering] = useState(false);
     
     const handleMouseIn = () =>{
@@ -72,4 +72,4 @@ const Card = (props) => {
     );
 }
 
-export default Card;
+export default ExperienceCard;
