@@ -11,7 +11,7 @@ const SamCard = styled.div`
 const SamCardHover=styled.div`
     background: rgba(0,0,0,0.4);
     height: 100%;
-    animation: ${props => props.out ? fadeOut : fadeIn} 0.3s linear;
+    animation: ${props => props.hovering ? fadeOut : fadeIn} 0.5s linear;
 `;
 
 const fadeIn=keyframes`
