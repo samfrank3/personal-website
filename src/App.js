@@ -5,15 +5,18 @@ import Navbar from "./components/Navbar";
 import About from "./components/About";
 import Footer from "./components/Footer";
 import Experience from './components/Experience';
-
+import Projects from './components/Projects';
+import Leadership from './components/Leadership';
 
 function App() {
   return (
-    <div className="App">
+    <div id='top' className="App">
       <Navbar />
       <Header />
       <About />
-      <Experience />
+      <Experience/>
+      <Projects />
+      <Leadership />
       <Footer />
     </div>
   );
