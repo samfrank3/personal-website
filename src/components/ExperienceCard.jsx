@@ -4,15 +4,21 @@ import styled, {keyframes} from 'styled-components'
 const SamCard = styled.div`
     margin: 40px auto;
     width: 70%;
-    height: 300px;
-    background: linear-gradient(90deg, #2BC0E4, #0F3443);
+    height:265px;
+    ${'' /* background: linear-gradient(0deg, #00baa0, #008b90); */}
+    background: linear-gradient(45deg, #2bc0e4, #0f3443);
 `;
-
-const SamCardHover=styled.div`
+const SamBack = styled.div`
     background: rgba(0,0,0,0.4);
-    height: 100%;
-    animation: ${props => props.hovering ? fadeOut : fadeIn} 0.5s linear;
+    height:265px;
+    animation: ${props => props.hovering ? fadeIn: fadeOut} 1s linear;
 `;
+const SamFront = styled.div`
+    display: flex;
+    flex-direction: row;
+    height:265px;
+    animation: ${props => props.hovering ? fadeOut: fadeIn} 1s linear;
+`
 
 const fadeIn=keyframes`
     from {
@@ -34,7 +40,7 @@ const fadeOut = keyframes`
 const ExperienceCard = (props) => {
     const [isHovering, setIsHovering] = useState(false);
     
-    const handleMouseIn = () =>{
+    const handleMouseOver = () =>{
         setIsHovering(true);
     }
     
@@ -42,34 +48,32 @@ const ExperienceCard = (props) => {
         setIsHovering(false);
     }
 
-    return (
-        isHovering ?
-        <SamCard onMouseOver={handleMouseIn} onMouseOut={handleMouseOut}>
-            <SamCardHover>
-                <span style={{fontSize: '21px', lineHeight: '1.5'}}>
-                    <ul style={{padding: '25px 60px', fontFamily: 'Helvetica Neue'}}>
-                        <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                        <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                        <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
-                    </ul>
-                </span>
-            </SamCardHover>
-        </SamCard>
-        :
-        <SamCard className="ui two column grid" style={{margin: '40px auto'}} onMouseOver={handleMouseIn} onMouseOut={handleMouseOut}>
-                <div className="column" style={{width: '20%', padding: 0, textAlign: 'center'}}>
-                    <div className="img" style={{marginTop: '20px'}}>
-                        <img src={props.logo} width='150' height='150' alt='logo'/>
+    return(
+        <div>
+            <SamCard onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} hovering={isHovering}>
+                {isHovering ? 
+                    <SamBack hovering={isHovering}>
+                       <ul style={{fontSize: '21px', lineHeight: '1.5', padding: '19px 60px', fontFamily: 'Roboto'}}>
+                           <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
+                           <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
+                           <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                       </ul>
+                   </SamBack>
+                :
+                <SamFront hovering={isHovering}>
+                    <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
+                        <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
+                        <h1 style={{fontSize: '24px'}}>{props.company}</h1>
                     </div>
-                    <h1>{props.company}</h1>
-                </div>
-                <div style={{padding: '2px', backgroundColor: '#fff'}}></div>
-                <div className="column" style={{padding: 0, margin: 'auto', textAlign: 'center'}}>
-                    <h2>{props.title}</h2>
-                    <h3>{props.time}</h3>
-                </div>
-        </SamCard>
-    );
+                    <div style={{padding: '2px', backgroundColor: '#fff'}}></div>
+                        <div style={{margin: 'auto', textAlign: 'center'}}>
+                        <h2>{props.title}</h2>
+                        <h3>{props.time}</h3>
+                    </div>
+                </SamFront>
+                }
+            </SamCard>
+        </div>
+    )
 }
-
 export default ExperienceCard;

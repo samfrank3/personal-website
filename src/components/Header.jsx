@@ -4,7 +4,7 @@ import Typewriter from "typewriter-effect";
 
 function Header() {
     return (
-        <div style={{paddingBottom: '15rem'}}>
+        <div id='Home' style={{paddingBottom: '15rem'}}>
             <div className="left">
                 <h1 className="intro">
                     Hello.<br/>

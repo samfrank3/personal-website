@@ -1,9 +1,11 @@
+html {
+  scroll-behavior: smooth;
+}
 body {
   background: linear-gradient(180deg, #34E89E, #0F3443);
   background-attachment:fixed;
   color: #eee;
 }
-
 .container{
   padding-left: 8%;
   display: grid;

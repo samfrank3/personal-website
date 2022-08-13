@@ -8,11 +8,6 @@ import image3 from '../images/UXD.png';
 
 
 const Leadership = () => {
-    const card1 = () => {
-        return (
-            <ProjectsCard />
-        )
-    }
     const slider = (
         <AwesomeSlider style={{width: '80%', height: '500px', margin: '0 auto'}} media = {[
             {source: image1},
@@ -22,7 +17,7 @@ const Leadership = () => {
         />
     )
     return (
-        <div style={{paddingTop: '15rem', margin: '0 auto'}}>
+        <div id='Leadership' style={{paddingTop: '15rem', paddingBottom: '15rem', margin: '0 auto'}}>
             <h1 className="subTitle" style={{textAlign: 'center'}}>Leadership Experience</h1>
             <hr style={{border: 'none', height: '3px', backgroundColor: '#fff',marginBottom:'3rem', width: '33%'}}/>
             {slider}
