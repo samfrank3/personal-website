@@ -6,13 +6,13 @@ function Header() {
     return (
         <div id='Home' style={{paddingBottom: '15rem'}}>
             <div className="left">
-                <h1 className="intro">
+                <h1 className="intro reveal">
                     Hello.<br/>
                     I'm<span className="name"> Samuel Frank</span><br />
                     <span className="positions">
                         <Typewriter 
                         options={{
-                            strings: ['A Student', 'A Computer Scientist', 'A Software Engineer'],
+                            strings: ['A Student', 'A Software Engineer', 'A Ravenclaw'],
                             autoStart: true,
                             loop: true
                         }}

@@ -1,7 +1,6 @@
 import React, {useState} from 'react';
 import styled, {keyframes} from 'styled-components'
 
-
 const rotateSquareCircle = keyframes`
     from{
         border-radius: 0%;
@@ -27,6 +26,7 @@ const rotateCircleSquare = keyframes`
 const ProjectCircle = styled.div`
 width: 400px;
 height: 400px;
+cursor: pointer;
 margin: 70px 40px;
 text-align: center;
 padding: ${props => props.click ? '30px 0' : '170px 0'};
@@ -37,6 +37,14 @@ border-radius: ${props => props.click ? '10%' : '50%'};
 animation: ${props => props.click ? rotateCircleSquare : rotateSquareCircle} 500ms linear;
 `
 
+const Anchor = styled.a`
+color: #fff;
+border-bottom: 3px solid white;
+&:hover{
+    color: ${props => props.click ? '#2BC0E4': '#0F3443'};
+    border-bottom: 3px solid ${props => props.click ? '#2BC0E4': '#0F3443'};
+}
+`;
 const ProjectsCard = (props) => {
     const [isClick, setIsClick] = useState(false);
 
@@ -49,13 +57,13 @@ const ProjectsCard = (props) => {
                 {isClick ? 
                     <div>
                         <h3 style={{fontSize: '30px'}}>
-                            <a href={props.link} target="_blank" rel="noopener noreferrer" style={{color: '#fff'}}>{props.title}</a>
+                            <Anchor href={props.link} target="_blank" rel="noopener noreferrer" click={isClick}>{props.title}</Anchor>
                         </h3>
                         <p style={{fontSize: '25px', padding: '0 5%'}}>{props.summary}</p>
                     </div>
                 :
                     <h1 style={{fontSize: '35px'}}>
-                        <a href={props.link} target="_blank" rel="noopener noreferrer" style={{color: '#fff'}}>{props.title}</a>
+                        <Anchor href={props.link} target="_blank" rel="noopener noreferrer">{props.title}</Anchor>
                     </h1>
                 }
             </ProjectCircle>

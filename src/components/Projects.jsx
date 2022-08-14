@@ -9,7 +9,7 @@ const Projects = () => {
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 <ProjectsCard 
                     title='BlackJack Casino'
-                    summary='This web application allows users to play blackjack, bet, and chat with other people online. They have to register and/or login to their accounts'
+                    summary='This web application allows users to play blackjack, bet, and chat with other people online. They can register and/or login to their accounts, see leaderboards, and make transactions.'
                     link={'https://bjcasino.herokuapp.com/'}
                 />
                 <ProjectsCard 

@@ -14,9 +14,34 @@ const Experience = () => {
                 company='Cydoc'
                 title='Software Engineering Intern'
                 time='June 2022 - Present'
+                description = {[
+                    "Develop an AI-driven medical web application to optimize patient-healthcare interactions by streamlining physicians' and other health care professionals' note-taking processes.",
+                    'Revamp customer-facing products by redesigning pages, components, and features to enhance user experience. Document and debug styling and layout-related code for both web and mobile view with Chrome DevTools.',
+                    'Technologies Used: React, Redux, Javascript, TypeScript',
+                ]}
             />
-            <ExperienceCard logo={rochci} company='ROC-HCI Lab' title='Research Assistant' time='April 2022 - Present' />
-            <ExperienceCard logo={uofr} company='CS Department' title='Lab Teaching Assistant' time='August 2021 - Present' />
+            <ExperienceCard 
+                logo={rochci} 
+                company='ROC-HCI Lab' 
+                title='Research Assistant' 
+                time='April 2022 - Present' 
+                description = {[
+                    'Research existing frameworks in educational technology and how to effectively utilize Machine Learning (ML) to make ML concepts more accessible to K-12 educators.',
+                    'Design, test, and update the SmileyCluster web-based system and Authoring Recommendation Tool to improve scientific discovery in K-12 education.',
+                    'Create lesson plans that educators would use to incorporate machine learning techniques within classes. Utilized K-Means Clustering, K-Nearest-Neighbor, and Tree Classification to scientific data.'
+                ]}
+            />
+            <ExperienceCard 
+                logo={uofr} 
+                company='CS Department' 
+                title='Lab Teaching Assistant' 
+                time='August 2021 - Present' 
+                description = {[
+                    'Lead lab sessions and office hours to help students learn about the foundations of Computer Science. Evaluate labs, projects, and tests.',
+                    'Refine student understanding by providing constructive feedback and resolve any inquiries students may have.',
+                    'Course: Data Structures and Algorithms (3 semesters)'
+                ]}
+            />
         </div>
     )
 }

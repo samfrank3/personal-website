@@ -11,6 +11,7 @@ const SamCard = styled.div`
 const SamBack = styled.div`
     background: rgba(0,0,0,0.4);
     height:265px;
+    overflow: auto;
     animation: ${props => props.hovering ? fadeIn: fadeOut} 1s linear;
 `;
 const SamFront = styled.div`
@@ -53,10 +54,10 @@ const ExperienceCard = (props) => {
             <SamCard onMouseEnter={handleMouseOver} onMouseLeave={handleMouseOut} hovering={isHovering}>
                 {isHovering ? 
                     <SamBack hovering={isHovering}>
-                       <ul style={{fontSize: '21px', lineHeight: '1.5', padding: '19px 60px', fontFamily: 'Roboto'}}>
-                           <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</li>
-                           <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</li>
-                           <li style={{margin: '10px 0'}}>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+                       <ul style={{fontSize: '21px', lineHeight: '1.5', padding: '0 60px', fontFamily: 'Roboto'}}>
+                            {props.description.map(item => {
+                                return <li style={{margin: '10px 0'}}>{item}</li>
+                            })}
                        </ul>
                    </SamBack>
                 :
