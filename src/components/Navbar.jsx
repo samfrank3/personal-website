@@ -14,19 +14,19 @@ backdrop-filter: blur(10px);
 `;
 
 const Anchor =styled.a`
-float: left;
-color: #0F3443;
+float: Right;
+color: #bdc3c7;
 text-align: center;
 padding: 15px;
 text-decoration: none;
 font-size: 1.5rem;
 &:hover  {
-    color: #FFF;
-    border-bottom: 2px solid white;
+    color: #2BC0E4;
+    border-bottom: 2px solid #2BC0E4;
 }
 &.active{
-    color: #FFF;
-    border-bottom: 2px solid white;
+    color: #2BC0E4;
+    border-bottom: 2px solid #2BC0E4;
 }
 `;
 
@@ -62,7 +62,7 @@ const Navbar =() => {
             <Anchor className={isActive === 'Experience' ? 'active': ''} href='#Experience'>Experience</Anchor>
             <Anchor className={isActive === 'Projects' ? 'active': ''} href='#Projects'>Projects</Anchor>
             <Anchor className={isActive === 'Leadership' ? 'active': ''} href="#Leadership">Leadership</Anchor>
-            <Anchor href='#top' style={{float: 'right', fontFamily:'Playfair Display'}}>Samuel Frank</Anchor>
+            <Anchor href='#top' style={{float: 'left', fontFamily:'Playfair Display', fontSize: '25px'}}>Samuel Frank</Anchor>
         </NavBar>
     )
 };

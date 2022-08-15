@@ -4,8 +4,8 @@ import ProjectsCard from './ProjectsCard';
 const Projects = () => {
     return (
         <div id='Projects' style={{paddingTop: '15rem', margin: '0 auto'}}>
-            <h1 className="subTitle" style={{textAlign: 'center'}}>Projects</h1>
-            <hr style={{border: 'none', height: '3px', backgroundColor: '#fff',marginBottom:'3rem', width: '33%'}}/>
+            <h1 className="subTitle" style={{textAlign: 'center', color: '#eee'}}>Projects</h1>
+            {/* <hr style={{border: 'none', height: '3px', backgroundColor: '#fff',marginBottom:'3rem', width: '33%'}}/> */}
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 <ProjectsCard 
                     title='BlackJack Casino'
@@ -16,10 +16,10 @@ const Projects = () => {
                     title='Malloc Implementation' 
                     summary='This project implemented C memory allocation functions such as malloc(), realloc() and free() in C. I designed and tested a segmented explicit free list which allocates memory using a best-fit search.'
                 />
-                <ProjectsCard 
+                {/* <ProjectsCard 
                     title='Mapping Project'
                     summary='Created a map of New York State that highlights the shortest path between two arbitrary points on the map and highlight the shortest path to reach all the points.'
-                />
+                /> */}
                 <ProjectsCard 
                     title='Fake News Detector' 
                     summary = 'Utilized NLP techniques such as tf-idf to help vectorize words and create ML models. We compared Logistic Regression, Tree Classification, and Random Forest Classification.'

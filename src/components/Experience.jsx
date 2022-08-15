@@ -6,9 +6,9 @@ import ExperienceCard from './ExperienceCard'
 
 const Experience = () => {
     return (
-        <div id="Experience"  style={{paddingTop: '15rem', margin: '0 auto'}}>
-            <h1 className="subTitle" style={{textAlign: 'center'}}>Experience</h1>
-            <hr style={{border: 'none', height: '3px', backgroundColor: '#fff',marginBottom:'3rem', width: '33%'}}/>
+        <div id="Experience"  style={{margin: '0 auto'}}>
+            <h1 className="subTitle" style={{textAlign: 'center', color: '#eee'}}>Experience</h1>
+            {/* <hr style={{border: 'none', height: '3px', backgroundColor: '#fff',marginBottom:'3rem', width: '33%'}}/> */}
             <ExperienceCard
                 logo={cydoc}
                 company='Cydoc'
@@ -26,8 +26,8 @@ const Experience = () => {
                 title='Research Assistant' 
                 time='April 2022 - Present' 
                 description = {[
-                    'Research existing frameworks in educational technology and how to effectively utilize Machine Learning (ML) to make ML concepts more accessible to K-12 educators.',
-                    'Design, test, and update the SmileyCluster web-based system and Authoring Recommendation Tool to improve scientific discovery in K-12 education.',
+                    'Research existing frameworks in EdTech and how to effectively utilize ML to make ML concepts more accessible to K-12 educators.',
+                    'Design, test, and update the SmileyDiscovery web system and Authoring Recommendation Tool to improve scientific discovery in K-12 education.',
                     'Create lesson plans that educators would use to incorporate machine learning techniques within classes. Utilized K-Means Clustering, K-Nearest-Neighbor, and Tree Classification to scientific data.'
                 ]}
             />

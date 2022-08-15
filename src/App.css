@@ -2,7 +2,8 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  background: linear-gradient(180deg, #34E89E, #0F3443);
+  /* background: linear-gradient(180deg, #34E89E, #0F3443); */
+  background: #445463;
   background-attachment:fixed;
   color: #eee;
 }
@@ -29,7 +30,7 @@ body {
   font-size: 4rem;
   padding-top: 20%;
   margin-bottom: 25%;
-  color: #0F3443;
+  color: #bdc3c7;
 }
 
 .left{
@@ -37,7 +38,7 @@ body {
 }
 
 .name{
-  color: #eee;
+  color: #2BC0E4;
 }
 
 .positions{
