@@ -7,7 +7,6 @@ width: auto;
 height: auto;
 padding: 30px;
 margin: 0 auto;
-${'' /* background-color: rgba(255,255,255,.15); */}
 `
 
 function About(){
@@ -18,10 +17,10 @@ function About(){
                     <img src={pic} alt="Sam HeadShot" width='350' length='350' style={{borderRadius: '300px'}}/>
                 </div>
                 <AboutBody>
-                    <h1 className="subTitle" style={{marginBottom: '0px', color: '#bdc3c7'}}>About </h1>
-                    <hr style={{border: 'none', height: '3px', backgroundColor: '#bdc3c7', marginLeft: '0', width: '100%'}}/>
+                    <h1 className="subTitle" style={{marginBottom: '0px', color: '#F9FEFF'}}>About </h1>
+                    <hr style={{border: 'none', height: '3px', backgroundColor: '#F9FEFF', marginLeft: '0', width: '100%'}}/>
                     <br/>
-                    <p className="aboutBody" style={{lineHeight: '1.5', fontSize: '22px', color: '#bdc3c7'}}>
+                    <p className="aboutBody" style={{lineHeight: '1.5', fontSize: '22px', color: '#F9FEFF'}}>
                     
                         Hey! I'm Samuel Frank and I am a Junior at the University of
                         Rochester pursuing a dual degree in Computer Science and 

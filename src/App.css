@@ -2,10 +2,9 @@ html {
   scroll-behavior: smooth;
 }
 body {
-  /* background: linear-gradient(180deg, #34E89E, #0F3443); */
-  background: #445463;
+  background: #041924;
   background-attachment:fixed;
-  color: #eee;
+  color: #F9FEFF;
 }
 .container{
   padding-left: 8%;
@@ -30,7 +29,7 @@ body {
   font-size: 4rem;
   padding-top: 20%;
   margin-bottom: 25%;
-  color: #bdc3c7;
+  color:#F9FEFF;
 }
 
 .left{
@@ -38,7 +37,8 @@ body {
 }
 
 .name{
-  color: #2BC0E4;
+  color: #75f0c3;
+;
 }
 
 .positions{
@@ -47,26 +47,4 @@ body {
 
 footer{
   text-align: center;
-}
-
-.reveal{
-  background-color: linear-gradient(#00dffc 0 0), linear-gradient(#00dffc 0 0);
-  background-size: 0 100%;
-  background-position: 0 0;
-  -webkit-background-clip: padding-box, text;
-  background-clip: padding-box, text;
-  background-repeat: no-repeat;
-  box-decoration-break: clone;
-  animation: sam 1.2s 0.5s both, b 1.2s 1.3s both;
-}
-
-@keyframes sam {
-  to {
-    background-size: 150% 100%;
-  }
-}
-@keyframes b {
-  to {
-    background-position: -200% 0, 0 0;
-  }
 }

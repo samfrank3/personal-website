@@ -6,24 +6,31 @@ const SamCard = styled.div`
     border-radius: 25px;
     width: 70%;
     height:265px;
-    background: #eee;
-    ${'' /* background: linear-gradient(0deg, #00baa0, #008b90); */}
-    ${'' /* background: linear-gradient(45deg, #2bc0e4, #0f3443); */}
+    background: #F9FEFF;
+    
 `;
 const SamBack = styled.div`
-    ${'' /* background: rgba(0,0,0,0.4); */}
     display: flex;
     flex-direction: row;
     height:265px;
     overflow: auto;
-    ${'' /* animation: ${props => props.hovering ? fadeIn: fadeOut} 1s linear; */}
 `;
 const SamFront = styled.div`
     display: flex;
     flex-direction: row;
     height:265px;
-    ${'' /* animation: ${props => props.hovering ? fadeOut: fadeIn} 1s linear; */}
 `
+const FadeBack = styled.div`
+    width:74%;
+    animation: ${props => props.hovering ? fadeOut: fadeIn} 500ms linear;
+`;
+
+const FadeFront = styled.div`
+    margin: auto;
+    textAlign: center;
+    color: #041924;
+    animation: ${props => props.hovering ? fadeOut: fadeIn} 500ms linear;
+`;
 
 const fadeIn=keyframes`
     from {
@@ -60,35 +67,28 @@ const ExperienceCard = (props) => {
                     <SamBack hovering={isHovering}>
                     <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
                         <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
-                        <h1 style={{fontSize: '24px', color: '#445463'}}>{props.company}</h1>
+                        <h1 style={{fontSize: '24px', color: '#041924'}}>{props.company}</h1>
                     </div>
-                    <div style={{padding: '2px', backgroundColor: '#445463'}}></div>
-                    <div style={{width:'74%'}}>
+                    <div style={{padding: '2px', backgroundColor: '#041924'}}></div>
+                    <FadeBack>
                         <ul>
                             {props.description.map(item => {
-                                return <li style={{fontSize: '21px', color: '#445463', fontFamily: 'Roboto', lineHeight: '1.5'}}>{item}</li>
+                                return <li key={item.toString()} style={{fontSize: '21px', color: '#041924', fontFamily: 'Roboto', lineHeight: '1.5'}}>{item}</li>
                             })}
                         </ul>
-                    </div>
-                    {/* <div>
-                       <ul style={{fontSize: '21px', lineHeight: '1.5', color:'#445463', fontFamily: 'Roboto'}}>
-                            {props.description.map(item => {
-                                return <li>{item}</li>
-                            })}
-                       </ul>
-                    </div> */}
+                    </FadeBack>
                    </SamBack>
                 :
                 <SamFront hovering={isHovering}>
                     <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
                         <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
-                        <h1 style={{fontSize: '24px', color: '#445463'}}>{props.company}</h1>
+                        <h1 style={{fontSize: '24px', color: '#041924'}}>{props.company}</h1>
                     </div>
-                    <div style={{padding: '2px', backgroundColor: '#445463'}}></div>
-                    <div style={{margin: 'auto', textAlign: 'center', color: '#445463'}}>
-                        <h2>{props.title}</h2>
-                        <h3>{props.time}</h3>
-                    </div>
+                    <div style={{padding: '2px', backgroundColor: '#041924'}}></div>
+                    <FadeFront>
+                        <h2 style={{textAlign: 'center'}}>{props.title}</h2>
+                        <h3 style={{textAlign: 'center'}}>{props.time}</h3>
+                    </FadeFront>
                 </SamFront>
                 }
             </SamCard>

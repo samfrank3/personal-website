@@ -14,35 +14,37 @@ backdrop-filter: blur(10px);
 `;
 
 const Anchor =styled.a`
-float: Right;
-color: #bdc3c7;
+float: right;
+color: #F9FEFF;
 text-align: center;
 padding: 15px;
 text-decoration: none;
 font-size: 1.5rem;
 &:hover  {
-    color: #2BC0E4;
-    border-bottom: 2px solid #2BC0E4;
+    color: #75f0c3;
+    border-bottom: 2px solid #75f0c3;
 }
 &.active{
-    color: #2BC0E4;
-    border-bottom: 2px solid #2BC0E4;
+    background-color: transparent;
+    color: #75f0c3;
+    border-bottom: 2px solid #75f0c3;
 }
 `;
 
 const Navbar =() => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
     const [isActive, setIsActive] = useState('Home')
-
+    
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
-        if(currentScrollPos <= 622){
+        console.log(currentScrollPos);
+        if(currentScrollPos <= 675){
             setIsActive('Home');
-        }else if(currentScrollPos <=1635){
+        }else if(currentScrollPos <=1369){
             setIsActive('About');
-        }else if(currentScrollPos <=2873){
+        }else if(currentScrollPos <=2639){
             setIsActive('Experience');
-        }else if(currentScrollPos <=4276){
+        }else if(currentScrollPos <=3630){
             setIsActive('Projects');
         }else {
             setIsActive('Leadership');
@@ -57,12 +59,13 @@ const Navbar =() => {
 
     return (
         <NavBar>
-            <Anchor className={isActive === 'Home' ? 'active': ''} href='#top'>Home</Anchor>
-            <Anchor className={isActive === 'About' ? 'active': ''} href='#About'>About</Anchor>
-            <Anchor className={isActive === 'Experience' ? 'active': ''} href='#Experience'>Experience</Anchor>
-            <Anchor className={isActive === 'Projects' ? 'active': ''} href='#Projects'>Projects</Anchor>
-            <Anchor className={isActive === 'Leadership' ? 'active': ''} href="#Leadership">Leadership</Anchor>
             <Anchor href='#top' style={{float: 'left', fontFamily:'Playfair Display', fontSize: '25px'}}>Samuel Frank</Anchor>
+            <Anchor className={isActive === 'Leadership' ? 'active': ''} href="#Leadership">Leadership</Anchor>
+            <Anchor className={isActive === 'Projects' ? 'active': ''} href='#Projects'>Projects</Anchor>
+            <Anchor className={isActive === 'Experience' ? 'active': ''} href='#Experience'>Experience</Anchor>
+            <Anchor className={isActive === 'About' ? 'active': ''} href='#About'>About</Anchor>
+            <Anchor className={isActive === 'Home' ? 'active': ''} href='#top'>Home</Anchor>
+            
         </NavBar>
     )
 };

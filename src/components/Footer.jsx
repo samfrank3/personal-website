@@ -18,7 +18,7 @@ const IconLinks = styled.div`
     }
 
     & a:hover{
-        color: #34E89E;
+        color: #75f0c3;
     }
 `;
 

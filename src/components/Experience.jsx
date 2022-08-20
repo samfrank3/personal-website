@@ -6,9 +6,8 @@ import ExperienceCard from './ExperienceCard'
 
 const Experience = () => {
     return (
-        <div id="Experience"  style={{margin: '0 auto'}}>
-            <h1 className="subTitle" style={{textAlign: 'center', color: '#eee'}}>Experience</h1>
-            {/* <hr style={{border: 'none', height: '3px', backgroundColor: '#fff',marginBottom:'3rem', width: '33%'}}/> */}
+        <div id="Experience"  style={{margin: '0 auto', paddingTop:'75px'}}>
+            <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>Experience</h1>
             <ExperienceCard
                 logo={cydoc}
                 company='Cydoc'
