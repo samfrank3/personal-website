@@ -21,6 +21,7 @@ const SamFront = styled.div`
     height:265px;
 `
 const FadeBack = styled.div`
+    overflow-y: auto;
     width:74%;
     animation: ${props => props.hovering ? fadeOut: fadeIn} 500ms linear;
 `;
