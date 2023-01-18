@@ -23,7 +23,7 @@ function About(){
 
     return (
         <div id='About' style={{paddingBottom: '10rem', paddingTop: '10rem', margin: '0 10%'}}>
-            <div  style={{padding: '11rem 0', display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
+            <div style={{padding: '11rem 0', display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                 <div style={{margin: '0 auto'}}>
                     <img src={pic} alt="Sam HeadShot" width='350' length='350' style={{borderRadius: '300px'}}/>
                 </div>
@@ -38,8 +38,8 @@ function About(){
                         Rochester pursuing a dual degree in Computer Science and 
                         Accounting. I'm passionate about designing and creating 
                         software tools to help people reach their fullest potential. 
-                        I strive to continuously challenge myself and learn more about 
-                        the latest trends and technologies. 
+                        I strive to continuously challenge myself and learn about 
+                        the latest trends and technologies. Please check out my <a href="https://drive.google.com/file/d/1D5iejvP-b0TUNGACtHWGVozDrwxEvad6/view?usp=sharing" target="_blank" style={{color: '#75f0c3', borderBottom: '2px solid #75f0c3'}} rel="noreferrer">resume!</a>
                         
                     </p> 
                 </AboutBody>
