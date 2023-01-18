@@ -15,13 +15,13 @@ const Anchor = styled.a`
 color: #041924;
 &:hover{
     color: #041924;
-    border-bottom: 3px solid #75f0c3;
+    ${'' /* border-bottom: 3px solid #75f0c3; */}
 }
 `;
 
 const Technologies = styled.div`
 margin: 0 auto;
-font-size: 0.9vw;
+font-size: 1rem;
 line-height:1;
 height: 35px;
 width: 80px;

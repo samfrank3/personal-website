@@ -68,7 +68,7 @@ const ExperienceCard = (props) => {
                     <SamBack hovering={isHovering}>
                     <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
                         <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
-                        <h1 style={{fontSize: '24px', color: '#041924'}}>{props.company}</h1>
+                        <h1 style={{fontSize: '1.5rem', color: '#041924'}}>{props.company}</h1>
                     </div>
                     <div style={{padding: '2px', backgroundColor: '#041924'}}></div>
                     <FadeBack>
@@ -83,7 +83,7 @@ const ExperienceCard = (props) => {
                 <SamFront hovering={isHovering}>
                     <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
                         <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
-                        <h1 style={{fontSize: '24px', color: '#041924'}}>{props.company}</h1>
+                        <h1 style={{fontSize: '1.5rem', color: '#041924'}}>{props.company}</h1>
                     </div>
                     <div style={{padding: '2px', backgroundColor: '#041924'}}></div>
                     <FadeFront>
