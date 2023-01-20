@@ -6,7 +6,7 @@ import LeadershipCard from './LeadershipCard';
 
 const Leadership = () => {
     return (
-        <div id='Leadership' style={{paddingTop: '15rem', margin: '0 auto'}}>
+        <div id='Leadership' style={{paddingTop: '5rem', margin: '0 auto'}}>
             <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>Leadership Experience</h1>
             <LeadershipCard 
                 club="Computer Science Undergraduate Council (CSUG)" 

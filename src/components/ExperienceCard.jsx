@@ -67,7 +67,7 @@ const ExperienceCard = (props) => {
                 {isHovering? 
                     <SamBack hovering={isHovering}>
                     <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
-                        <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
+                        <img src={props.logo} alt='logo' style={{maxWidth:'150px', maxHeight: '150px' }} />
                         <h1 style={{fontSize: '1.5rem', color: '#041924'}}>{props.company}</h1>
                     </div>
                     <div style={{padding: '2px', backgroundColor: '#041924'}}></div>
@@ -82,7 +82,7 @@ const ExperienceCard = (props) => {
                 :
                 <SamFront hovering={isHovering}>
                     <div style={{width: '24%', textAlign: 'center', paddingTop: '30px'}}>
-                        <img src={props.logo} alt='logo' style={{width:'150px', height:'150px'}} />
+                        <img src={props.logo} alt='logo' style={{maxWidth:'150px', maxHeight: '150px' }} />
                         <h1 style={{fontSize: '1.5rem', color: '#041924'}}>{props.company}</h1>
                     </div>
                     <div style={{padding: '2px', backgroundColor: '#041924'}}></div>

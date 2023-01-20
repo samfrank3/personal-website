@@ -1,9 +1,12 @@
-import React, {useState, useEffect} from 'react';
+import React, {useState, useEffect, useMemo} from 'react';
 import styled from 'styled-components';
+import logo1 from '../images/Logo.svg';
+import logo2 from '../images/Logo2.svg';
+import logo3 from '../images/Logo3.svg';
 
 const NavBar = styled.div`
 width: 100%;
-height: 60px;
+height: 53px;
 display: block;
 font-family: Roboto;
 position: fixed;
@@ -13,6 +16,7 @@ backdrop-filter: blur(10px);
 background: rgba(4,25,36,0.3);
 brightness: 0.1;
 -webkit-backdrop-filter: blur(10px);
+
 .navigation{
     list-style-type: none;
     float: right;
@@ -36,15 +40,46 @@ brightness: 0.1;
         transition: max-width 0.5s ease;
         border-top-left-radius: 2px;
         border-top-right-radius: 2px;
+        position: relative;
+        top: -35px;
     }
 
     .button{
         width: 200px;
         position: relative;
-        margin-top: -35px;
         cursor: pointer;
     }
 }
+`;
+const Symbol = styled.span`
+float: left;
+z-index: 1;
+&:hover{
+    border-bottom: 2px solid #75f0c3;
+}
+position: absolute;
+`;
+
+const Logo = styled.img`
+height: 43px;
+float: left;
+margin: 5px 0px 0px 20px;
+z-index: 3;
+position: relative;
+`;
+
+const Name = styled.div`
+color: #F9FEFF;
+text-align: center;
+padding: 15px;
+text-decoration: none;
+font-size: 1.5rem;
+float: left;
+font-family:Playfair Display;
+font-size: 25px;
+z_index: 3;
+display: flex;
+justify-content: center;
 `;
 
 const Anchor =styled.a`
@@ -77,9 +112,10 @@ font-size: 1.5rem;
     }
 }
 `;
-
 const Navbar =() => {
     const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [isHover, setIsHover] = useState(false);
+    const [isMobile, setIsMobile] = useState(false);
     const [isActive, setIsActive] = useState('Home'); 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
     const [setHeight, setHeightState] = useState('50px');
@@ -89,6 +125,12 @@ const Navbar =() => {
         setHeightState(hamburgerOpen? '50px' : '325px')
     }
 
+    const setHoverTrue = () => {
+        setIsHover(true)
+    }
+    const setHoverFalse = () => {
+        setIsHover(false)
+    }
     // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleScroll = () => {
         const currentScrollPos = window.pageYOffset;
@@ -109,14 +151,26 @@ const Navbar =() => {
     useEffect(() => {
         window.addEventListener('scroll', handleScroll);
         return () => {
-            window.removeEventListener('scroll', handleScroll);
+            window.removeEventListener('scroll', handleScroll); 
         }
     },[prevScrollPos, isActive, handleScroll]);
 
+    //this is inefficient
+    useEffect(() => {
+        if (window.innerWidth < 1000) {
+            setIsMobile(true)
+        }else{
+            setIsMobile(false)
+        }
+    })
     return (
-        <NavBar>
-            <Anchor href='#top' style={{float: 'left', fontFamily:'Playfair Display', fontSize: '25px'}}>Samuel Frank</Anchor>
-            <ul className= "navigation" >
+        <NavBar className= "navbarMobile">
+            {/* <a href="https://www.flaticon.com/free-icons/red-panda" title="red panda icons">Red panda icons created by Icongeek26 - Flaticon</a> */}
+            <Symbol onMouseEnter={setHoverTrue} onMouseLeave={setHoverFalse} style={{width: `${isMobile? '0px': '240px'}`, height: '53px'}} />
+            <Logo src={isHover? logo2: logo3} href='#top' alt="logo"/>
+            <Name href='#top' style={{color: `${isHover? '#75f0c3':'#F9FEFF'}`, margin: 'auto'}}> Samuel Frank</Name>
+            
+            <ul className= "navigation" style={{}} >
                 <div className="button" onClick={toggleHamburger}>
                     <div className="burger burger1" />
                     <div className="burger burger2" />
@@ -130,6 +184,11 @@ const Navbar =() => {
             </ul>
             <style jsx> {`
                 @media(max-width: 1000px) {
+                    .navbarMobile{
+                        display: flex;
+                        align-items: baseline;
+                        flex-direction: row;
+                    }
                     #navigation{
                         display: ${hamburgerOpen? 'block': 'none'};
                         width: 200px;

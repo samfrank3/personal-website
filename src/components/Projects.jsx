@@ -3,7 +3,7 @@ import ProjectsCard from './ProjectsCard';
 
 const Projects = () => {
     return (
-        <div id='Projects' style={{paddingTop: '15rem', margin: '0 auto'}}>
+        <div id='Projects' style={{paddingTop: '5rem', margin: '0 auto', paddingBottom: '10rem'}}>
             <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>Projects</h1>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 <ProjectsCard 

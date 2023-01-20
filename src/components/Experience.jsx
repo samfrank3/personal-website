@@ -1,12 +1,12 @@
 import React from 'react';
 import cydoc from '../images/cydoc-logo.svg';
-import rochci from '../images/roc-hci-logo.png'
-import uofr from '../images/uofr-logo.png';
+import rochci from '../images/roc-hci-logo.svg'
+import uofr from '../images/uofr-logo.svg';
 import ExperienceCard from './ExperienceCard'
 
 const Experience = () => {
     return (
-        <div id="Experience"  style={{margin: '0 auto', paddingTop:'75px'}}>
+        <div id="Experience"  style={{margin: '0 auto', paddingTop:'75px', paddingBottom: '10rem'}}>
             <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>Experience</h1>
             <ExperienceCard
                 logo={cydoc}

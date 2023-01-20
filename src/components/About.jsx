@@ -22,7 +22,7 @@ function About(){
     });
 
     return (
-        <div id='About' style={{paddingBottom: '10rem', paddingTop: '10rem', margin: '0 10%'}}>
+        <div id='About' style={{paddingBottom: '10rem', paddingTop: '5rem', margin: '0 10%'}}>
             <div style={{padding: '11rem 0', display: 'flex', flexDirection: 'row', flexWrap: 'wrap'}}>
                 <div style={{margin: '0 auto'}}>
                     <img src={pic} alt="Sam HeadShot" width='350' length='350' style={{borderRadius: '300px'}}/>
