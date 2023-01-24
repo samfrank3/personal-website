@@ -1,8 +1,7 @@
-import React, {useState, useEffect, useMemo} from 'react';
+import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
-import logo1 from '../images/Logo.svg';
-import logo2 from '../images/Logo2.svg';
-import logo3 from '../images/Logo3.svg';
+import logo1 from '../images/Logo2.svg';
+import logo2 from '../images/Logo3.svg';
 
 const NavBar = styled.div`
 width: 100%;
@@ -50,14 +49,6 @@ brightness: 0.1;
         cursor: pointer;
     }
 }
-`;
-const Symbol = styled.span`
-float: left;
-z-index: 1;
-&:hover{
-    border-bottom: 2px solid #75f0c3;
-}
-position: absolute;
 `;
 
 const Logo = styled.img`
@@ -113,16 +104,27 @@ font-size: 1.5rem;
 }
 `;
 const Navbar =() => {
-    const [prevScrollPos, setPrevScrollPos] = useState(0);
+    const [prevScrollPos, setPrevScrollPos] = useState('0');
     const [isHover, setIsHover] = useState(false);
-    const [isMobile, setIsMobile] = useState(false);
     const [isActive, setIsActive] = useState('Home'); 
     const [hamburgerOpen, setHamburgerOpen] = useState(false);
     const [setHeight, setHeightState] = useState('50px');
+    const [isPressedDown, setIsPressedDown] =useState(false)
 
     const toggleHamburger = () => {
         setHamburgerOpen(!hamburgerOpen)
         setHeightState(hamburgerOpen? '50px' : '325px')
+    }
+    const goToTop = () => {
+        window.scrollTo(0,0);
+    }
+
+    const setLogoDarker= () => {
+        setIsPressedDown(true)
+    }
+
+    const setLogoLighter = () => {
+        setIsPressedDown(false)
     }
 
     const setHoverTrue = () => {
@@ -155,19 +157,11 @@ const Navbar =() => {
         }
     },[prevScrollPos, isActive, handleScroll]);
 
-    //this is inefficient
-    useEffect(() => {
-        if (window.innerWidth < 1000) {
-            setIsMobile(true)
-        }else{
-            setIsMobile(false)
-        }
-    })
     return (
         <NavBar className= "navbarMobile">
-            {/* <a href="https://www.flaticon.com/free-icons/red-panda" title="red panda icons">Red panda icons created by Icongeek26 - Flaticon</a> */}
-            <Symbol onMouseEnter={setHoverTrue} onMouseLeave={setHoverFalse} style={{width: `${isMobile? '0px': '240px'}`, height: '53px'}} />
-            <Logo src={isHover? logo2: logo3} href='#top' alt="logo"/>
+            <span className='toTop' onMouseEnter={setHoverTrue} onMouseLeave={setHoverFalse} onClick={goToTop} style={{borderBottom: isHover? '2px solid #75f0c3': '', zIndex: '4'}} />
+            <Logo src={isHover? logo1: logo2} href='#top' alt="logo" onClick={goToTop} onMouseDown={setLogoDarker} onMouseUp={setLogoLighter} style={{filter: isPressedDown? 'invert(82%) sepia(42%) saturate(442%) hue-rotate(98deg) brightness(99%) contrast(90%)': '', cursor: 'pointer'}}/>
+            {/* logo is from flaticon, https://www.flaticon.com/free-icon/fox_4787297?term=fox&page=1&position=24&origin=tag&related_id=4787297"/> */}
             <Name href='#top' style={{color: `${isHover? '#75f0c3':'#F9FEFF'}`, margin: 'auto'}}> Samuel Frank</Name>
             
             <ul className= "navigation" style={{}} >
@@ -183,6 +177,14 @@ const Navbar =() => {
                 <li><Anchor id="navigation" className={isActive === 'Leadership' ? 'active': ''} href="#Leadership">Leadership</Anchor></li>
             </ul>
             <style jsx> {`
+                .toTop{
+                    width: 240px;
+                    height: 53px;
+                    float: left;
+                    position: absolute;
+                    z-index:1;
+                    cursor: pointer;
+                }
                 @media(max-width: 1000px) {
                     .navbarMobile{
                         display: flex;
@@ -196,6 +198,9 @@ const Navbar =() => {
                     .navigation{
                         max-width: ${setHeight};
                         background-color: ${hamburgerOpen? '#2a3b42' : ''};
+                    }
+                    .toTop{
+                        width: 0px;
                     }
 
                     .button{
@@ -217,7 +222,7 @@ const Navbar =() => {
                         transition: all 0.3s linear;
                     }
                     .burger1{
-                        transform: ${ hamburgerOpen ? 'rotate(45deg)' : 'rotate(0)'};
+                        transform: ${ hamburgerOpen ? 'rotate(42deg)' : 'rotate(0)'};
                         {/* background-color: ${hamburgerOpen? '#75f0c3': '#F9FEFF'} */}
                         background-color: #F9FEFF;
                     }
@@ -229,7 +234,7 @@ const Navbar =() => {
                     }
 
                     .burger3{
-                        transform: ${ hamburgerOpen? 'rotate(-45deg)' : 'rotate(0)'};
+                        transform: ${ hamburgerOpen? 'rotate(-42deg)' : 'rotate(0)'};
                         {/* background-color: ${hamburgerOpen? '#75f0c3': '#F9FEFF'} */}
                         background-color: #F9FEFF;
                     }

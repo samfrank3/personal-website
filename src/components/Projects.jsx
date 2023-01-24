@@ -4,7 +4,7 @@ import ProjectsCard from './ProjectsCard';
 const Projects = () => {
     return (
         <div id='Projects' style={{paddingTop: '5rem', margin: '0 auto', paddingBottom: '10rem'}}>
-            <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>Projects</h1>
+            <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF', fontFamily: 'Playfair Display'}}>Projects</h1>
             <div style={{display: 'flex', flexDirection: 'row', justifyContent: 'space-evenly', flexWrap: 'wrap'}}>
                 <ProjectsCard 
                     title='BlackJack Casino'

@@ -67,10 +67,10 @@ const ProjectsCard = (props) => {
                     </h3>
                     <p style={{fontSize: '25px', padding: '0 5%', color: '#041924', height: '250px'}}>{props.summary}</p>
                     <div style={{display: 'flex', rowDirection:'row', margin: '0 15%'}}>
-                        {props.technology.map(item => {return <Technologies>{item}</Technologies>})}
+                        {props.technology.map((item) => {return <Technologies>{item}</Technologies>})}
                     </div>
                     <div style={{margin: '1.5rem'}}>
-                        {props.links.map(item => {return<a href={item.link} target="_blank" rel="noopener noreferrer"><Button>{item.name}</Button></a>})}
+                        {props.links.map((item) => {return<a href={item.link} target="_blank" rel="noopener noreferrer"><Button>{item.name}</Button></a>})}
                     </div>
                     
                 </div>

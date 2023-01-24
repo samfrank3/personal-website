@@ -7,7 +7,7 @@ import ExperienceCard from './ExperienceCard'
 const Experience = () => {
     return (
         <div id="Experience"  style={{margin: '0 auto', paddingTop:'75px', paddingBottom: '10rem'}}>
-            <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>Experience</h1>
+            <h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF', fontFamily: 'Playfair Display'}}>Experience</h1>
             <ExperienceCard
                 logo={cydoc}
                 company='Cydoc'

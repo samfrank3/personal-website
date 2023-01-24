@@ -5,7 +5,7 @@ import pic from "../images/Sam_head.png";
 const AboutBody=styled.div`
 width: auto;
 height: auto;
-padding: 30px;
+padding: 30px 0 0 0;
 margin: 0 auto;
 `
 
@@ -28,11 +28,11 @@ function About(){
                     <img src={pic} alt="Sam HeadShot" width='350' length='350' style={{borderRadius: '300px'}}/>
                 </div>
                 <AboutBody>
-                    {isDesktop ? (<h1 className="subTitle" style={{marginBottom: '0', color: '#F9FEFF'}}>About</h1>) 
-                    : (<h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF'}}>About</h1>)}
+                    {isDesktop ? (<h1 className="subTitle" style={{marginBottom: '0', color: '#F9FEFF', fontFamily: 'Playfair Display'}}>About</h1>) 
+                    : (<h1 className="subTitle" style={{textAlign: 'center', color: '#F9FEFF', fontFamily: 'Playfair Display'}}>About</h1>)}
                     <hr style={{border: 'none', height: '3px', backgroundColor: '#F9FEFF', width: '100%'}}/>
                     <br/>
-                    <p className="aboutBody" style={{lineHeight: '1.5', fontSize: '22px', color: '#F9FEFF'}}>
+                    <p className="aboutBody">
                     
                         Hey! I'm Samuel Frank and I am a Junior at the University of
                         Rochester pursuing a dual degree in Computer Science and 
@@ -44,6 +44,22 @@ function About(){
                     </p> 
                 </AboutBody>
             </div>
+            <style jsx>{`
+            .aboutBody{
+                font-size: 1.6rem;
+                width: 600px;
+                line-height: 1.5;
+                color: #F9FEFF;
+                display: inline-block;
+                margin: 0 auto;
+            }
+            @media(max-width: 1000px){
+                .aboutBody{
+                    font-size: 1.3rem;
+                    text-align: center;
+                }
+            }
+            `}</style>
         </div>
     )
 }

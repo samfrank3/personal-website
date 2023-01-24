@@ -48,6 +48,9 @@
 .club{
     padding-left: 25px;
 }
+.title{
+    font-size: 2.5rem;
+}
 
 .accordion-icon{
     transition: transform 0.6s ease;

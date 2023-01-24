@@ -13,11 +13,6 @@ body {
   gap: 1rem;
   align-items: center;
 }
-.aboutBody{
-  font-size: 1.5rem;
-  width: 600px;
-  align-items: center;
-}
 
 .subTitle{
   font-size: 3rem;
