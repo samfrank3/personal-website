@@ -1,5 +1,7 @@
 Samuel Frank's Website
 
+To see the product, you can visit https://samuel-n-frank.com/
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
