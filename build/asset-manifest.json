@@ -1,23 +1,26 @@
 {
-  "main.css": "/static/css/main.91099199.chunk.css",
-  "main.js": "/static/js/main.c9667313.chunk.js",
-  "main.js.map": "/static/js/main.c9667313.chunk.js.map",
-  "static/js/1.aa1ef92c.chunk.js": "/static/js/1.aa1ef92c.chunk.js",
-  "static/js/1.aa1ef92c.chunk.js.map": "/static/js/1.aa1ef92c.chunk.js.map",
-  "static/js/2.13681dfb.chunk.js": "/static/js/2.13681dfb.chunk.js",
-  "static/js/2.13681dfb.chunk.js.map": "/static/js/2.13681dfb.chunk.js.map",
-  "runtime~main.js": "/static/js/runtime~main.3ea3b0ff.js",
-  "runtime~main.js.map": "/static/js/runtime~main.3ea3b0ff.js.map",
-  "static/media/Sam_head.png": "/static/media/Sam_head.feb74da3.png",
-  "static/media/cydoc-logo.svg": "/static/media/cydoc-logo.23dc4f8e.svg",
-  "static/media/roc-hci-logo.png": "/static/media/roc-hci-logo.731f037c.png",
-  "static/media/uofr-logo.png": "/static/media/uofr-logo.9af72c1e.png",
-  "static/media/CSUG.JPG": "/static/media/CSUG.95d7d3f0.JPG",
-  "static/media/DandyHacks.JPG": "/static/media/DandyHacks.e705734c.JPG",
-  "static/media/UXD.JPG": "/static/media/UXD.1ba23cf1.JPG",
-  "static/media/index.css": "/static/media/Roboto-Regular.6887b6f2.woff2",
-  "static/css/main.91099199.chunk.css.map": "/static/css/main.91099199.chunk.css.map",
-  "index.html": "/index.html",
-  "precache-manifest.6b677a54a7d399591a7082e4ca3110c5.js": "/precache-manifest.6b677a54a7d399591a7082e4ca3110c5.js",
-  "service-worker.js": "/service-worker.js"
+  "files": {
+    "main.css": "/static/css/main.32e7570b.css",
+    "main.js": "/static/js/main.7b684183.js",
+    "static/js/787.28cb0dcd.chunk.js": "/static/js/787.28cb0dcd.chunk.js",
+    "static/media/DandyHacks.JPG": "/static/media/DandyHacks.b627717eb8e62ec85cf9.JPG",
+    "static/media/CSUG.JPG": "/static/media/CSUG.39766d70e61de5f5b392.JPG",
+    "static/media/Sam_head.png": "/static/media/Sam_head.ff9c70fcf89f1d2e35d3.png",
+    "static/media/UXD.JPG": "/static/media/UXD.26a11558e4ec4f0c57cb.JPG",
+    "static/media/uofr-logo.svg": "/static/media/uofr-logo.b2f1c6a8e515d8257ff91c4daa8c836c.svg",
+    "static/media/PlayfairDisplay-SemiBold.woff2": "/static/media/PlayfairDisplay-SemiBold.f0cbe9a8f81d84b9ed6c.woff2",
+    "static/media/Roboto-Regular.woff2": "/static/media/Roboto-Regular.9429985be4f46ec8fcfc.woff2",
+    "static/media/roc-hci-logo.svg": "/static/media/roc-hci-logo.c2b31929a8d5a49e601f9caaab60b7f8.svg",
+    "static/media/Logo2.svg": "/static/media/Logo2.097a4cf9a7f632a7dc153ea38bed66a6.svg",
+    "static/media/Logo3.svg": "/static/media/Logo3.6c642c1da16af400ddfc286be4bf3e8a.svg",
+    "static/media/cydoc-logo.svg": "/static/media/cydoc-logo.e67de3fe3681000b5a1ecf6d58aac552.svg",
+    "index.html": "/index.html",
+    "main.32e7570b.css.map": "/static/css/main.32e7570b.css.map",
+    "main.7b684183.js.map": "/static/js/main.7b684183.js.map",
+    "787.28cb0dcd.chunk.js.map": "/static/js/787.28cb0dcd.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.32e7570b.css",
+    "static/js/main.7b684183.js"
+  ]
 }
