@@ -17,7 +17,7 @@ const Projects = () => {
                     links= {[
                         {
                             name: 'Website Link',
-                            link: "https://bjcasino.herokuapp.com/"
+                            link: "https://blackjackcasino.onrender.com/"
                         },
                         {
                             name: 'Github Link',

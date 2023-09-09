@@ -34,12 +34,12 @@ function About(){
                     <br/>
                     <p className="aboutBody">
                     
-                        Hey! I'm Samuel Frank and I am a Junior at the University of
+                        Hey! I'm Samuel Frank and I am a Senior at the University of
                         Rochester pursuing a dual degree in Computer Science and 
                         Accounting. I'm passionate about designing and creating 
-                        software tools to help people reach their fullest potential. 
+                        software tools to help empower people to tackle intricate issues. 
                         I strive to continuously challenge myself and learn about 
-                        the latest trends and technologies. Please check out my <a href="https://drive.google.com/file/d/1D5iejvP-b0TUNGACtHWGVozDrwxEvad6/view?usp=sharing" target="_blank" style={{color: '#75f0c3', borderBottom: '2px solid #75f0c3'}} rel="noreferrer">resume!</a>
+                        the latest trends and technologies. Please check out my <a href="https://drive.google.com/file/d/1U7-rSjomvLH0CIF0v0Z_GxMCid_hqCaj/view?usp=sharing" target="_blank" style={{color: '#75f0c3', borderBottom: '2px solid #75f0c3'}} rel="noreferrer">resume!</a>
                         
                     </p> 
                 </AboutBody>

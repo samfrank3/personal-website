@@ -12,7 +12,7 @@ function Header() {
                     <span className="positions">
                         <Typewriter 
                         options={{
-                            strings: ['A Student', 'A Software Engineer', 'A Ravenclaw'],
+                            strings: ['An Autodidact', 'A Software Engineer', 'A Ravenclaw', 'An INFJ'],
                             autoStart: true,
                             loop: true
                         }}
